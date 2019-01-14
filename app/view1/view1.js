@@ -9,7 +9,7 @@ angular.module('myApp.view1', ['ngRoute'])
   });
 }])
 
-.controller('View1Ctrl', ['$scope', function($scope) {
+.controller('View1Ctrl', ['$scope', function($scope, $modalInstance, items) {
     $scope.patients = [
       {
         "name": "John Doe",
@@ -83,12 +83,4 @@ angular.module('myApp.view1', ['ngRoute'])
       }
     ];
 
-    $scope.createPhone = function () {
-
-        $scope.person.phones.push({
-            'number' : '111-222'
-        });
-
-    };
 }]);
-
