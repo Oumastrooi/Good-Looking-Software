@@ -1,1 +1,41 @@
-<p>This is the partial for view 1.</p>
+<div ng-app>
+  <header><h1>PATIENT MENU</h1></header>
+  <main>
+    <div ng-controller="View1Ctrl">
+      <table class="table table-striped table-bordered">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">NAME</th>
+            <th scope="col">MR</th>
+            <th scope="col">ID NUM</th>
+            <th scope="col">PROV</th>
+            <th scope="col">INSURANCE</th>
+            <th scope="col">ADDRESS</th>
+            <th scope="col">CITY</th>
+            <th scope="col">ST</th>
+            <th scope="col">PHONE</th>
+            <th scope="col">DB</th>
+            <th scope="col">ADMIT</th>
+            <th scope="col">DC</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="patient in patients">
+            <td>{{ patient.name }}</td>
+            <td>{{ patient.mr }}</td>
+            <td>{{ patient.idnum }}</td>
+            <td>{{ patient.prov }}</td>
+            <td>{{ patient.insurance }}</td>
+            <td>{{ patient.address }}</td>
+            <td>{{ patient.city }}</td>
+            <td>{{ patient.st }}</td>
+            <td>{{ patient.phone }}</td>
+            <td>{{ patient.db }}</td>
+            <td>{{ patient.admit }}</td>
+            <td>{{ patient.dc }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+</div>
